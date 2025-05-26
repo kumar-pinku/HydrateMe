@@ -69,15 +69,15 @@ export default function ReminderSchedule({ history, reminderInterval = 60, cupSi
               <div className="relative">
                 <button
                   onClick={() => toggleMenu(i)}
-                  className="text-gray-500 hover:text-blue-600"
+                  className="text-gray-500 hover:text-blue-600 cursor-pointer"
                 >
                   ⋮
                 </button>
                 {entry.showMenu && (
-                  <div className="absolute right-0 top-6 bg-white border border-gray-200 shadow-lg rounded text-sm z-50 w-28">
+                  <div className="absolute right-2 top-0 bottom-0 h-[34px] bg-white border border-gray-200 shadow-lg rounded text-sm z-[999999] w-28">
                     <button
                       onClick={() => deleteEntry(i)}
-                      className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-500"
+                      className="block w-full text-left h-[34px] px-4 py-2 hover:bg-gray-100 text-red-500 cursor-pointer"
                     >
                       Delete
                     </button>

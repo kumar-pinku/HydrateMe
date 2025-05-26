@@ -6,7 +6,7 @@ import confetti from 'canvas-confetti';
 import WeeklyChart from '../components/WeeklyChart';
 import ReminderSchedule from '../components/ReminderSchedule';
 import useHydrationNotifications from '../hooks/useHydrationNotifications';
-import { requestNotificationToken } from '../lib/requestNotificationToken';
+// import { requestNotificationToken } from '../lib/requestNotificationToken';
 
 export default function Home() {
   const {
@@ -110,7 +110,7 @@ export default function Home() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-3 py-2 capitalize transition-all duration-150 ${activeTab === tab
+              className={`px-3 py-2 capitalize transition-all duration-150 cursor-pointer ${activeTab === tab
                 ? 'border-b-2 border-blue-500 font-bold text-blue-700'
                 : 'opacity-60'
                 }`}
@@ -260,13 +260,6 @@ export default function Home() {
               onChange={(e) => localStorage.setItem('reminderInterval', e.target.value)}
               className="w-full px-3 py-2 border border-blue-300 rounded mb-6"
             />
-            <button
-              className="bg-blue-500 text-white px-4 py-2 rounded"
-              onClick={requestNotificationToken}
-            >
-              🔔 Enable Push Notifications
-            </button>
-
           </div>
         )}
       </section>
